@@ -67,37 +67,45 @@ elPool.textContent = 'pool ' + parkHotel.pool;
 // document.write(caps.toUpperCase());
 // document.write(saying.indexOf("o"));
 // document.write(saying.substring(0,8));
-
 // var sayingArray = saying.split(" ");
 // console.log(sayingArray);
-
 // document.write(sayingArray[0].replace("h", "H") + " " + sayingArray[1].replace("s", "S") + " " + sayingArray[2].replace("h", "H"));
-
 // var msg = "<h2>length: </h2>";
 // msg += saying.length;
 // msg += "<h2>uppercase: </h2>";
 // msg += saying.toUpperCase();
-
 // elMessage = document.getElementById("pageInfo");
 // elMessage.innerHTML = msg;
-
 // var javascriptDataTypes = ["String", "Number", "Boolean", "Undefined", "Null"];
 // document.write(javascriptDataTypes);
-
-var saying = "home sweet home ";
-
-var numbers = 1.5555999
-
-console.log(isNaN(numbers));
-
+// console.log(isNaN(numbers));
 // document.write(numbers.toFixed(2));
 // document.write(numbers.toPrecision(2));
 // document.write(numbers.toExponential(10));
-
 // document.write(Math.PI.toFixed(4));
 // document.write(Math.round(numbers));
 // document.write(Math.random() + 6);
+// var randomNumber = (Math.random() * 20) + 1;
+// document.write(randomNumber.toPrecision(1));
+// var saying = "home sweet home ";
+// var numbers = 1.5555999;
+// var today = new Date();
+// var dob = new Date(1984, 11, 10);
+// var difference = today.getTime() - dob.getTime();
+// var difference2 = today.getTime() - dob.getTime();
+// difference = (difference / 31556900000);
+// difference2 = (difference2 / 604800000);
+// document.write(Math.floor(difference) + " " + Math.floor(difference2));
 
-var randomNumber = (Math.random() * 20) + 1;
-document.write(randomNumber.toPrecision(1));
+var score1, score2, pass1, pass2;
 
+score1 = 8;
+score2 = 8;
+pass1 = 6;
+pass2 = 6;
+
+if (score1 >= pass1 && score2 >= pass2) {
+	document.write("Both rounds passed");
+} else {
+	document.write("You have failed one or both exams");
+}
