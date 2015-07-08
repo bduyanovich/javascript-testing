@@ -97,15 +97,17 @@ elPool.textContent = 'pool ' + parkHotel.pool;
 // difference2 = (difference2 / 604800000);
 // document.write(Math.floor(difference) + " " + Math.floor(difference2));
 
-var score1, score2, pass1, pass2;
 
-score1 = 8;
-score2 = 8;
-pass1 = 6;
-pass2 = 6;
 
-if (score1 >= pass1 && score2 >= pass2) {
-	document.write("Both rounds passed");
-} else {
-	document.write("You have failed one or both exams");
+var selectors = document.querySelector("div.big");
+// selectors.className = "cool";
+
+var allSelectors = document.querySelectorAll("div.big");
+var i;
+
+for (i = 0; i < allSelectors.length; i++) {
+	allSelectors[i].className = "cool small dog";
 }
+
+
+
