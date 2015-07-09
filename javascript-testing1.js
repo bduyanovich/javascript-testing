@@ -99,15 +99,20 @@ elPool.textContent = 'pool ' + parkHotel.pool;
 
 
 
-var selectors = document.querySelector("div.big");
-// selectors.className = "cool";
 
-var allSelectors = document.querySelectorAll("div.big");
+
+var allDiv = document.getElementsByTagName("div");
 var i;
 
-for (i = 0; i < allSelectors.length; i++) {
-	allSelectors[i].className = "cool small dog";
+for (i = 0; i < allDiv.length; i++) {
+	allDiv[i].className = "cool";
 }
 
+var allLi = document.getElementsByTagName("li");
+var j;
 
+for (j=0; j<allLi.length; j++) {
+	allLi[j].className = "cool";
+}
 
+console.log(allLi);
