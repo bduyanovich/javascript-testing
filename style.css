@@ -13,3 +13,42 @@
 .cool {
 	background-color: blue;
 }
+
+.walking {
+	background-color: purple;
+}
+
+form {
+	margin-top: 50px;
+}
+
+input {
+	width: 200px;
+	display: block;
+	float: left;
+	
+}
+
+label {
+	display: block;
+	width: 200px;
+	margin-bottom: 10px;
+	float: left;
+	clear: left;
+
+}
+
+.red {
+	color: red;
+	margin-left: 10px;
+}
+
+.block {
+	display: block;
+	float: left;
+}
+
+ul {
+	clear: both;
+	margin-top: 20px;
+}

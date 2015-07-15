@@ -97,22 +97,51 @@ elPool.textContent = 'pool ' + parkHotel.pool;
 // difference2 = (difference2 / 604800000);
 // document.write(Math.floor(difference) + " " + Math.floor(difference2));
 
+var msg = "<h1>System Maintenance</h1>".toUpperCase();
+msg += "<p>Our servers are down for maintenance.</p>";
+
+var newDiv = document.createElement("div");
+newDiv.className = "big red";
+newDiv.innerHTML = msg;
+var attachHere = document.getElementById("score");
+document.body.insertBefore(newDiv, document.body.firstChild);
 
 
 
 
-var allDiv = document.getElementsByTagName("div");
-var i;
+var username = document.getElementById("username");
+var usernameError = username.nextSibling;
+var password = document.getElementById('password');
+var passwordError = password.nextSibling;
 
-for (i = 0; i < allDiv.length; i++) {
-	allDiv[i].className = "cool";
+function checkUsername(e, minLength) {
+	var target = e.target
+	if(target.value.length < minLength) {
+		target.nextSibling.nextSibling.textContent = " Must contain " + minLength + " characters.";
+	}else {
+		target.nextSibling.textContent = "";
+	}
 }
 
-var allLi = document.getElementsByTagName("li");
-var j;
+username.addEventListener("blur", function(e) {
+	checkUsername(e, 5);
+}, false);
 
-for (j=0; j<allLi.length; j++) {
-	allLi[j].className = "cool";
+password.addEventListener("blur", function(e) {
+	checkUsername(e, 10);
+}, false);
+
+
+function removeItem(e) {
+	var target = e.target;
+	var parentLi = target.parentNode;
+	var grandParentLi = target.parentNode.parentNode;
+	
+	grandParentLi.removeChild(parentLi);
+	e.preventDefault();
 }
 
-console.log(allLi);
+var pageLi = document.getElementById("shoppingList");
+pageLi.addEventListener("click", function(e) {
+	removeItem(e);
+}, false);
